@@ -147,7 +147,7 @@
                     return;
                 }
                 var self = new widgetInstagram();
-                var options = {url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=2006022704.1cbe99b.9a96600adb354ea6b47583bb992b44fd",
+                var options = {url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=YOUR_ACCESS_TOKEN",
                     col: 3,
                     fill: 4,
                     width: "350px"
