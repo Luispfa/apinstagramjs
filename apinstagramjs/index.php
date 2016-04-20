@@ -64,13 +64,14 @@
                         for (var prop in ul_css_value) {
                             ul.style[prop] = ul_css_value[prop];
                         }
-
+console.log(data)
                         for (var index in data) {
                             if (data.hasOwnProperty(index)) {
-
+console.log(index)
+console.log(data[index])
                                 var img = document.createElement("img");
-                                img.title = data[index].caption.hasOwnProperty("text") ? data[index].caption.text : "";
-                                img.alt = data[index].caption.hasOwnProperty("text") ? data[index].caption.text : "";
+                                img.title = data[index].caption !== null && data[index].caption.hasOwnProperty("text") ? data[index].caption.text : "";
+                                img.alt = data[index].caption !== null && data[index].caption.hasOwnProperty("text") ? data[index].caption.text : "";
                                 img.src = data[index].images.thumbnail.url;
                                 img.style.maxWidth = data[index].images.thumbnail.width + "px";
                                 var img_css_value = img_css();
@@ -147,10 +148,10 @@
                     return;
                 }
                 var self = new widgetInstagram();
-                var options = {url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=YOUR_ACCESS_TOKEN",
-                    col: 3,
-                    fill: 4,
-                    width: "350px"
+                var options = {url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=2330689767.d264f46.f84714a9390e4770890a10842d8ed67e",
+                    col: 5,
+                    fill: 10,
+                    width: "250px"
                 };
                 self.jsonp(options, function (response) {
                     var element = document.getElementById("demo");
