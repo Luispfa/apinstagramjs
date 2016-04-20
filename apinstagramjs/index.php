@@ -64,11 +64,9 @@
                         for (var prop in ul_css_value) {
                             ul.style[prop] = ul_css_value[prop];
                         }
-console.log(data)
+
                         for (var index in data) {
                             if (data.hasOwnProperty(index)) {
-console.log(index)
-console.log(data[index])
                                 var img = document.createElement("img");
                                 img.title = data[index].caption !== null && data[index].caption.hasOwnProperty("text") ? data[index].caption.text : "";
                                 img.alt = data[index].caption !== null && data[index].caption.hasOwnProperty("text") ? data[index].caption.text : "";
